@@ -1,3 +1,5 @@
 # Mutual-Dakiya
-<h1 style="color=purple;">Hello</h1>
-<h1 style="color:rgb(150, 0, 105);">Sample heading</h1>
+this is a work in progress, implementation of this website is going to need knowledge of HTML, CSS, Javascript and some backend technology, which the team currently lacks, but that is not going to stop us, we have already started learning topics that are required for implementation!! 
+
+Here is the timeline for implementation
+5/03/23 -> Complete implementation of frontend which includes pages like log in, putting up a request and accepting a request
