@@ -3,64 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mutual Dakiya</title>
     <link rel="icon" type="image/x-icon" href="India Post LOGO.jpg" />
     <meta
       name="description"
       content="A platform for enabling students for mutual delivery pickups"
     />
-    <script src="add_request.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="add_request.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
 
-  <body>
-    <div class="container">
-
+  <body class="bg-warning">
+    <div class="container-fluid">
       <header>
-        <div id="title_bar">
-          <h1>Mutual Dakiya</h1>
+        <div class="jumbotron rounded text-center bg-primary">
+            <h1 class="display-1" id="heading">Mutual Dakiya</h1>
+        </div>
         </header>
         <main>
           <div class="main_container">
-            <div id="request_container"></div>
-            <div id="make_request">
-              <div>
-                <img src="gold-coin-euclidean-vector-png-favpng-KhAhfj434MpNBQ0RCBtuLd4Tj.jpg" alt="coins" height="30vh">
-                <p id="points" style="display: inline;" >30</p>
+            <div class="container" id="request_container"></div>
+            <div class="card bg-dark text-white border-light" id="make_request">
+              <div id="request_header" class="row">
+                <div class="col-2 pointAndImage">
+                  <img src="coin-794.svg" alt="coins" height="30vh">
+                  <p id="points" style="display: inline;" >30</p>
+                </div>
               </div>
-              <form onsubmit="addRequest(); return false;">
-                <!-- add required field again -->
-                <div class="Name_container">
-                  <label for="Name">Name</label>
-                  <input type="text" id="Name" />
-                </div>
-                <div class="contact_container">
-                  <label for="Contact_number">Contact Number</label>
-                  <input
-                    type="tel"
-                    id="Contact_number"
-                    minlength="10"
-                    maxlength="10"
-                  />
-                </div>
-                <div class="vendor_container">
-                  <label for="Vendors">Please enter the name of vendor</label>
-                  <select id="Vendors">
-                    <option value="Amazon">Amazon</option>
-                    <option value="Flipkart">Flipkart</option>
-                    <option value="Myntra">Myntra</option>
-                    <option value="Bluedart">Bluedart</option>
-                    <option value="Delhivery">Delhivery</option>
-                  </select>
-                </div>
-                <div class="submit_btn">
-                  <input type="submit" value="Submit" />
-                </div>
-                <div class="submit_btn">
-                  <input type="reset" value="reset" id="reset" />
-                </div>
-              </form>
+              <div id="requestBody">
+                <form onsubmit="addRequest2();return false;">
+                  <!-- add required field again -->
+                  <div class="form-row">
+                    <div class="form-group Name_container col-lg col-xs-12">
+                      <label for="Name">Name</label>
+                      <input type="text" id="Name" class="form-control" />
+                    </div>
+                    <div class="form-group contact_container col-lg col-xs-12">
+                      <label for="Contact_number">Contact Number</label>
+                      <input
+                        type="tel"
+                        id="Contact_number" class="form-control"
+                        
+                        minlength="10"
+                        maxlength="10"
+                      />
+                    </div>
+                    <div class="form-group vendor_container col-lg col-xs-12">
+                      <label for="Vendors">Please enter the name of vendor</label>
+                      <select id="Vendors" class="form-control" >
+                        <option value="Amazon">Amazon</option>
+                        <option value="Flipkart">Flipkart</option>
+                        <option value="Myntra">Myntra</option>
+                        <option value="Bluedart">Bluedart</option>
+                        <option value="Delhivery">Delhivery</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-lg col-xs-12">
+                      <label for="desc">Additional Info (optional)</label>
+                      <input type="text" class="form-control" id="desc">
+                    </div>
+                  </div>
+                  <div class="buttons">
+                    <div >
+                      <input class="btn btn-primary" type="submit" value="Submit" />
+                    </div>
+                    <div>
+                      <input class="btn btn-warning" type="reset" value="reset" id="reset" />
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </main>
