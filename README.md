@@ -5,6 +5,9 @@ Here is the timeline for implementation:
 
 5/03/23 -> Complete implementation of frontend which includes pages like log in, putting up a request and accepting a request
 
+Update:
+the page for putting up a request is out, rest of the things shall be implemented once the team is equipped with knowledge of basic backend
+
 checkback later for more updates!! 
 
 Thanks!!
